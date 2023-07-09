@@ -12,7 +12,7 @@ NodeJS + Typescript + VueJS project.
 
 Open the project in Gitpod :
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ziggornif/mgdis-dev-test/-/tree/main/)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/drouian-m/mgdis-dev-test/-/tree/main/)
 
 To complete the exercices, you need to run the following commands :
 
