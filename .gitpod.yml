@@ -7,7 +7,7 @@ tasks:
   - name: Setup project
     before: corepack enable
     init: pnpm install
-    command: pnpm --filter client set-env
+    command: pnpm build:wc
 vscode:
   extensions:
     - ms-azuretools.vscode-docker

@@ -23,3 +23,27 @@ pnpm dev # to run client and server instances
 ```
 
 After that, the UI will be avaible at http://localhost:5173 and the server at http://localhost:8080.
+
+## Exercices
+
+### Step 1 : UI - Plug the create tweet API call
+
+Go to the [twitter rest adapter](apps/client/src/business/twitter/twitter.adapter.ts) and write the create tweet API call.
+
+This function should return the created tweet.
+
+### Step 2 : Backend - Write the like feature
+
+Go to the [twitter module](apps/server/src/twitter/twitter.controller.ts) and write the like feature (controller, service and repository).
+
+The like feature must respect the following rules:
+
+- Only an existing tweet could be liked
+- The like counter should be incremented by 1
+- The updated tweet should be returned by the API
+
+### Step 3 : UI - Plug the like tweet API call
+
+Go to the [twitter rest adapter](apps/client/src/business/twitter/twitter.adapter.ts) and write the like tweet API call.
+
+This function should return the updated tweet.
