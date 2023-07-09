@@ -1,0 +1,17 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.json",
+    "./src/**/*.d.ts"
+  ],
+  "exclude": [
+    "./src/**/*.spec.ts"
+  ],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "Node16",
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  }
+}

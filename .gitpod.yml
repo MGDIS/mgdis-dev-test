@@ -1,0 +1,12 @@
+tasks:
+  - name: UseNode18
+    command: |
+      nvm install 18
+      nvm use 18
+      nvm alias default  18
+vscode:
+  extensions:
+    - ms-azuretools.vscode-docker
+    - rome.rome
+    - ZixuanChen.vitest-explorer
+    - vscode-icons-team.vscode-icons
