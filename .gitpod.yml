@@ -1,9 +1,13 @@
 tasks:
-  - name: UseNode18
+  - name: UseNode20
     command: |
-      nvm install 18
-      nvm use 18
-      nvm alias default  18
+      nvm install 20
+      nvm use 20
+      nvm alias default  20
+  - name: Setup project
+    before: corepack enable
+    init: pnpm install
+    command: pnpm --filter client set-env
 vscode:
   extensions:
     - ms-azuretools.vscode-docker

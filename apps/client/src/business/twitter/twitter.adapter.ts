@@ -19,8 +19,13 @@ function formatDate(date: Date): string {
 }
 
 class TwitterRestAdapter {
+	baseUrl: string;
+	constructor(baseUrl: string) {
+		this.baseUrl = baseUrl;
+	}
+
 	async listTweets(): Promise<Tweet[]> {
-		const response = await fetch("http://localhost:8080/tweets");
+		const response = await fetch(`${this.baseUrl}/tweets`);
 		const jsonResp = await response.json();
 		const tweets: Array<Tweet> = [];
 		for (const tweet of jsonResp) {

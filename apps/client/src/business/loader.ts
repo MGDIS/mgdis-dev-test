@@ -13,8 +13,14 @@ class Loader {
 	#twitterAdapter: TwitterRestAdapter;
 	#twitterService: TwitterService;
 	constructor() {
+		const baseUrl = import.meta.env.VITE_GITPOD_WORKSPACE_URL
+			? `https://8080-${
+					import.meta.env.VITE_GITPOD_WORKSPACE_URL.split("https://")[1]
+			  }`
+			: "http://localhost:8080";
+
 		this.#sessionAdapter = new SessionCookieAdapter();
-		this.#authenticationAdapter = new AuthenticationRestAdapter();
+		this.#authenticationAdapter = new AuthenticationRestAdapter(baseUrl);
 		this.#authenticationService = new AuthenticationService(
 			this.#authenticationAdapter,
 			this.#sessionAdapter,

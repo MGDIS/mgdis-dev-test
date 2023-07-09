@@ -1,6 +1,10 @@
 class AuthenticationRestAdapter {
+	baseUrl: string;
+	constructor(baseUrl: string) {
+		this.baseUrl = baseUrl;
+	}
 	async auth(username: string, password: string): Promise<string> {
-		const response = await fetch("http://localhost:8080/signin", {
+		const response = await fetch(`${this.baseUrl}/signin`, {
 			method: "POST",
 			headers: {
 				Accept: "text/plain",
@@ -16,7 +20,7 @@ class AuthenticationRestAdapter {
 	}
 
 	async register(username: string, password: string) {
-		const response = await fetch("http://localhost:8080/register", {
+		const response = await fetch(`${this.baseUrl}/register`, {
 			method: "POST",
 			headers: {
 				Accept: "application/json",
